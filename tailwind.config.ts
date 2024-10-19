@@ -12,8 +12,20 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage:{
+    "footerground-image": 'url("/assets/svg/arch.svg")',
+    "background": 'url("/assets/images/jj-ying-7JX0-bfiuxQ-unsplash.jpg")',
+    "artwork": 'url("/assets/images/artwork.aa0923d3.png")',
+    "hero": 'url("/assets/images/artwork3.png")',
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["winter"]
+  }
 };
 export default config;
+
+
+
