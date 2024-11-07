@@ -1,12 +1,24 @@
 import React from 'react'
+import {z} from "zod";
+
+
+const schema = z.object({
+  firstname: z.string().min(3),
+  lastname: z.string().min(3),
+  username: z.string().min(3),
+  email: z.string().email()
+})
+
 
 const Register = () => {
+
+
 
   return (
         <form className='flex items-center justify-center  h-screen' action="">
           <div className='flex flex-col gap-3  w-[40%]'>
-              <label className='flex  rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Firstname"><span className='w-[25%]'>First Name:</span><input className='w-[100%] outline-none border-transparent' type="text" name='first name' /></label>
-              <label className='flex rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Lastname"><span className='w-[25%]'>Last Name:</span><input type="text" className='w-[100%] outline-none border-transparent' name='last name'/></label>
+              <label className='flex  rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Firstname"><span className='w-[25%]'>First Name:</span><input className='w-[100%] outline-none border-transparent' type="text" name='firstname' /></label>
+              <label className='flex rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Lastname"><span className='w-[25%]'>Last Name:</span><input type="text" className='w-[100%] outline-none border-transparent' name='lastname'/></label>
               <label className='flex rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Username"><span className='w-[25%]'>Username:</span><input type="text" className='w-[100%] outline-none border-transparent' name='username' /></label>
               <label className='flex rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Email"><span className='w-[25%]'>Email:</span><input type="email" className='w-[100%] outline-none border-transparent' name='email' /></label>
               <label className='flex rounded-full border-b-4 border-orange-400 bg-white py-1 px-3' htmlFor="Password"><span className='w-[25%]'>Password:</span><input type="password" className='w-[100%] outline-none border-transparent'  name='password'/></label>
@@ -16,7 +28,9 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Register;
+
+
 //   <div className='h-screen w-full min-w-[375px] flex justify-center items-center bg-background-image'>
 //     <div>
 //   <label className="input input-bordered flex items-center gap-2">

@@ -13,8 +13,8 @@ if(!vehiclepagedetail)
   return (<div>Not found</div>)
 
     return (
-      <section className='h-screen'>
-      <div className='grid grid-cols-2 py-5 w-[90%] mx-auto '>
+    <section className='md:h-screen'>
+      <div className='grid grid-cols-1 gap-10 md:grid-cols-2 py-5 w-[90%] mx-auto '>
         <div className='flex justify-center'>
         <div className="card bg-base-100 w-80 shadow-xl">
         <figure>
@@ -32,7 +32,6 @@ if(!vehiclepagedetail)
         </div>
         </div>
         <Booking/>
-
       </div>
     </section>
 )
